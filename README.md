@@ -9,10 +9,14 @@ I haven't thoroughly tested all of the code, so use at your own discretion.
 Reproduced from the original author's website listed above (for conservation and ease of access).
 
 Import the pyMCU module:
-`import pymcu`
+```
+import pymcu
+```
 
 You can get general help about the module using pythons built-in help function:
-`help(pymcu)`
+```
+help(pymcu)
+```
 
 You will get a listing of all the class object functions and some documentation about what those functions do.
 
@@ -22,7 +26,8 @@ Now create a new mcuModule class object:
 By default this will scan for a device using a baudrate of 115200.
 If you want to scan for available devices on another baudrate (perhaps because it failed to find any pyMCU device), you can make use of
 
-```pymcu.mcuScan(baudrate)
+```
+pymcu.mcuScan(baudrate)
     scan for available pyMCUs.
     returns a dictionary (portname, index)
     primarily used during class initialization to find the first available pyMCU hardware module but this could also be called to get a list of all available hardware modules if you needed to find and initialize a specific one manually.
@@ -31,6 +36,7 @@ If you want to scan for available devices on another baudrate (perhaps because i
 , and scan using different baud rates (e.g. 57600, 38400, 19200, 9600).
 
 One thing I liked about this device is that it gave me easy access to PWM, with the ability to set parameters like PWM period, from an interactive shell. These are accessible with
+
 ```
 pwmDuty(pwmPin, duty)
     Sets the PWM duty cycle for one of the PWM pins.
@@ -57,5 +63,5 @@ pwmPeriod(preScaler, preScalerOffset)
     preScaler: 1, 4, 16, or 64
     preScalerOffset: 0 to 255
     Example: pwmPeriod(1, 255) - Sets preScaler to 1:1, preScalerOffset to 255, PWM Period will be 31.875 micro Seconds, at 50% duty cycle Freq. will be 31.25Khz
-    ```
+```
 
