@@ -34,8 +34,10 @@ pymcu.mcuScan(baudrate)
     Usage:
     baudrate - sets the baudrate to use when scanning for available pyMCU hardware modules. If not specified the default value is 115200.```
 , and scan using different baud rates (e.g. 57600, 38400, 19200, 9600).
+```
 
-One thing I liked about this device is that it gave me easy access to PWM, with the ability to set parameters like PWM period, from an interactive shell. These are accessible with
+
+One thing I really liked about this device is that it gave me easy access to PWM, with the ability to set parameters like PWM period, from an interactive shell. These are accessible with
 
 ```
 pwmDuty(pwmPin, duty)
